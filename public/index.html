@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/transfer" method="POST" enctype="multipart/form-data">
+            <h1>***From lab to home***</h1>
+            <input type="email" placeholder="Your email" name="email" id="email" required>
+            <input type="text" placeholder="Subject" name="subject">
+            <textarea placeholder="Message" name="message"></textarea>
+            <input type="file" name="attachment" id="attachment">
+            <input type="submit" value="send mail" id="button">
+        </form>
+        <hr id="hr">
+    </div>
+
+    <script>
+
+        const button = document.getElementById('button');
+        const hr = document.getElementById('hr');
+
+        const cssStyles = {
+            position: 'relative',
+            margin: '0',
+            height: '5px',
+            backgroundColor: '#777',
+            width: '100%',
+            animation: 'grow 25s forwards'
+        };
+
+        function applyStyles() {
+            for (const prop in cssStyles) {
+                if (cssStyles.hasOwnProperty(prop)) {
+                    hr.style[prop] = cssStyles[prop];
+                }
+            }
+        }
+
+            button.onclick = function () {
+                console.log('event is triggering');
+                applyStyles();
+            };
+    </script>
+</body>
+
+</html>

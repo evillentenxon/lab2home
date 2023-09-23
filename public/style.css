@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+:root{
+    --input-height: 35px;
+}
+
+body{
+    display: grid;
+    font-family: Kanit;
+    box-sizing:content-box
+}
+
+.container{
+    /* width: 500px; */
+    height: auto;
+    display: grid;
+    margin: auto;      
+    max-width: fit-content;
+    overflow-x: hidden;
+}
+
+form{    
+    width: 500px;
+    height: auto;
+    background-color: #999;
+    padding: 0 70px 0 50px;
+    border-radius: 2px 2px 0 0;    
+}
+
+@keyframes grow{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+input, textarea{
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px;
+}
+
+textarea{
+    height: calc(var(--input-height)*2);
+}
+
+h1{
+    text-align: center;
+}
+
+#button{
+    width: 100px;
+    background-color: #44d;
+    color: #fff;
+    box-shadow: none;
+    float: right;    
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#button:hover, #button:focus{
+    background-color: #fff;
+    color: #44d;
+}
+
+::placeholder{
+    font-family: kanit;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+input:focus, textarea:focus {
+    background-color: rgb(205, 241, 240);
+    outline: none;
+  }
